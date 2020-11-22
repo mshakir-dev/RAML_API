@@ -1,0 +1,10 @@
+{
+  "name": "Muhammad",
+  "employeeStatus": "active",
+  "age": 25,
+  "address": {
+    "street": "123 ABC Ave",
+    "city": "Gadsden",
+    "state": "Alabame"
+  }
+}

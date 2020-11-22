@@ -1,0 +1,110 @@
+#%RAML 1.0
+title: Employees API.
+description: !include docs/apiDescription.md
+version: v0 
+baseUri: https://www.learncodewithms/v0
+
+# Now Add the Library File into the Main APi.raml
+
+uses:
+  employees: types/employees.raml
+
+
+# Create a Traits
+traits:
+  status:
+    queryParameters:
+      status:
+        description: Status of the Employee is Active or Inactive
+        type: string
+
+
+# This Resource will be use to get all the records and create a new record.
+/employees:
+  description: It represents a detail record for all the employees.
+  get:
+    description: It retrieve a list of employees information
+    # To call the Traits in the resource, just simply add the keyword
+    # is []
+    is: [status]
+    responses:
+      200:
+        description: OK
+        body:
+          application/json:
+            example: !include examples/get_list.json
+            type: object
+            properties:
+              data:
+                type: employees.employees  
+      404:
+        description: Page Not Found
+        body:
+          application/json:
+            example: !include examples/error_404.json
+
+          # Start Working with Body Parameter Information.
+  post:
+    description: Create a new Record for the Company.
+    body:
+      application/json:
+        example: !include examples/post_request.json
+
+    responses:
+      201:
+        description: 
+        body:
+          application/json:
+            example: !include examples/post_response.json
+              
+
+# This Record will be use to get a particular record and update a particular record.
+  /{employee-id}:
+    description: Retrieve a specific and update a specific record .
+    uriParameters:
+      employee-id:
+        description: Unique Identifier
+        type: string
+        example: "5"
+        
+    get:
+      description: Retrieve Sinlge item based on the Employee Id
+      responses:         
+        200:
+          description: OK
+          body:
+            application/json:
+              example: !include examples/get_single_item.json
+              
+    put:
+      description: Update Single Item based on the Employee Id.
+      body:
+        application/json:
+          example: !include examples/put_request.json
+
+      responses:
+        200:
+          description: Updated
+          body:
+            application/json:
+              example: !include examples/put_response.json   
+            
+    delete:
+      # Delete End Point will be homework for all my youtube family
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Muhammad",
+      "employeeStatus": "active",
+      "age": 25,
+      "address": {
+        "street": "123 ABC Ave",
+        "city": "Gadsden",
+        "state": "Alabame"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Muhammad Shakir",
+      "employeeStatus": "active",
+      "age": 25,
+      "address": {
+        "street": "123 Main Ave",
+        "city": "Birmingham",
+        "state": "Alabame"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Muhammad Sumair",
+      "employeeStatus": "active",
+      "age": 25,
+      "address": {
+        "street": "123 Second Street",
+        "city": "Gadsden",
+        "state": "Alabame"
+      }
+    }
+  ]
+}

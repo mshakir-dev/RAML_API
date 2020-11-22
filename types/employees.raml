@@ -1,0 +1,43 @@
+#%RAML 1.0 Library
+
+# If the Type is an array then add Items otherwise... do not...
+
+types:
+  employees:
+    type: array
+    items:
+      properties:
+        id:
+          type: string
+          description: unique Identifier
+          example: "1"
+        name:
+          type: string
+          description: unique Identifier
+          # I forgot to change the description but it will show on the right side whatever the description we have for the field
+          example: "Muhammad Shakir"
+        employeeStatus:
+          type: string
+          description: unique Identifier
+          example: "active"
+        age:
+          type: number
+          description: unique Identifier
+          example: 1
+        address:
+          type: object
+          properties:
+            street:
+              description: Street Name
+              type: string
+              example: "ABC Avenue"  
+            city:
+              description: City Name
+              type: string
+              example: "Gadsden"  
+            state:
+              description: State Name
+              type: string
+              example: "Alabama"  
+          
+          
