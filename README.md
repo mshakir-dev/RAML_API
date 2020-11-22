@@ -20,8 +20,8 @@ Online Platform to practice the RAML .... (anypoint.mulesoft.com)
 <li> Title: Name of the API </li>
 <li> Version: Version of the API </li>
 
-![](images/SampleCode.JPG)
+![](images/SampleCode.jpg)
 
 <hr>
 
-![](images/JsonResponse.JPG)
+![](images/JsonResponse.jpg)
